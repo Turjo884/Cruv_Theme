@@ -1,0 +1,217 @@
+@import "utils/index";
+@import "components/index";
+@import "section/index";
+@import "blog/index";
+
+.section {
+  &-sub__wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+    h6 {
+      position: relative;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 28px;
+      border-radius: 90px;
+      background: #b3ec11;
+      color: var(--primary);
+      padding: 5px 25px;
+    }
+
+    span {
+      height: 1px;
+      flex: 1;
+      background-color: rgb(255 255 255 / 10%);
+    }
+  }
+
+  &__wrap {
+    gap: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media #{$md} {
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+  }
+
+  &-title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 200px;
+    line-height: 200px;
+    text-transform: uppercase;
+
+    @media #{$xl} {
+      font-size: 170px;
+      line-height: 170px;
+    }
+    @media #{$lg} {
+      font-size: 140px;
+      line-height: 150px;
+    }
+    @media #{$md} {
+      font-size: 120px;
+      line-height: 130px;
+    }
+    @media #{$sm} {
+      font-size: 100px;
+      line-height: 110px;
+    }
+    @media #{$xs} {
+      font-size: 60px;
+      line-height: 75px;
+    }
+  }
+
+  &__content {
+    max-width: 417px;
+    p {
+      text-indent: 103px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 28px;
+      color: #aaaaaa;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+/**
+ * ----------------------------------------
+ * animation fade-in-bottom
+ * ----------------------------------------
+ */
+.fade-in-bottom {
+  -webkit-animation-name: fade-in-bottom;
+  animation-name: fade-in-bottom;
+  animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/**
+ * ----------------------------------------
+ * animation fade-in-left
+ * ----------------------------------------
+ */
+.fade-in-left {
+  -webkit-animation-name: fade-in-left;
+  animation-name: fade-in-left;
+  animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes fade-in-left {
+  0% {
+    -webkit-transform: translateX(-50px);
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-left {
+  0% {
+    -webkit-transform: translateX(-50px);
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/**
+ * ----------------------------------------
+ * animation fade-in-right
+ * ----------------------------------------
+ */
+.fade-in-right {
+  -webkit-animation-name: fade-in-right;
+  animation-name: fade-in-right;
+  animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes fade-in-right {
+  0% {
+    -webkit-transform: translateX(50px);
+    transform: translateX(50px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-right {
+  0% {
+    -webkit-transform: translateX(50px);
+    transform: translateX(50px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes upDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px); /* উপরে যাবে */
+  }
+}
+
+.upDown {
+  animation: upDown 5s infinite ease-in-out;
+}

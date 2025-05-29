@@ -1,0 +1,37 @@
+/*-----------------------------------------------------------------------------------
+
+  Theme Name: Cruv Creative Agency & Portfolio  HTML Template
+  Author: 
+  Support: 
+  Description: 
+  Version: 1.0
+
+-----------------------------------------------------------------------------------
+
+/************ TABLE OF CONTENTS ***************
+
+
+/*----------------------------------------*/
+/* VARIBALES CSS START
+/*----------------------------------------*/
+
+// Colors
+:root {
+  --primary: #000000;
+  --secondary: #B3EC11;
+  --black: #000000;
+  --white: #FFFFFF;
+  --blue: #3B4EFF;
+
+  --action: #B3EC11;
+}
+
+
+// Responsive Variable
+$xxxl: 'only screen and (min-width: 1920px)';
+$xxl: 'only screen and (max-width: 1919px)';
+$xl: 'only screen and (max-width: 1399px)';
+$lg: 'only screen and (max-width: 1199px)';
+$md: 'only screen and (max-width: 991px)';
+$sm: 'only screen and (max-width: 767px)';
+$xs: '(max-width: 575px)';

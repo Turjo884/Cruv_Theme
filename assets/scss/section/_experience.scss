@@ -1,0 +1,70 @@
+.experience {
+  &__media {
+    position: relative;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__card {
+    z-index: 1;
+    right: 65px;
+    bottom: -1px;
+    padding: 20px;
+    max-width: 645px;
+    position: absolute;
+    background: #e5e0d0;
+    border-radius: 10px 10px 0px 0px;
+
+    @media #{$md} {
+      position: inherit;
+      right: inherit;
+    }
+
+    &-wrapper {
+      gap: 30px;
+      display: flex;
+      padding: 35px 35px;
+      border-radius: 10px;
+      align-items: center;
+      background-color: #3b4eff;
+
+      @media #{$sm} {
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      @media #{$sm} {
+        padding: 20px;
+        gap: 10px;
+      }
+
+      .number {
+        font-size: 90px;
+        line-height: 90px;
+        font-weight: 700;
+
+        @media #{$sm} {
+          font-size: 50px;
+          line-height: 50px;
+        }
+      }
+
+      p {
+        font-size: 20px;
+        line-height: 30px;
+        font-weight: 500;
+        font-family: var(--font_brico);
+
+        @media #{$sm} {
+          font-size: 15px;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+}

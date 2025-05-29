@@ -1,0 +1,273 @@
+/*----------------------------------------*/
+/*  01. Button CSS START
+/*----------------------------------------*/
+
+.rr-btn {
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  z-index: 5;
+  padding: 26px 31px;
+  background-color: #ff6a3a;
+  color: var(--white);
+  border-radius: 100px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1;
+  display: inline-flex;
+  border-color: transparent;
+  align-items: center;
+  text-transform: capitalize;
+  letter-spacing: -0.02em;
+
+  @media #{$lg} {
+    padding: 18px 29px;
+  }
+
+  @media #{$xs} {
+    padding: 16px 20px;
+    font-size: 14px;
+  }
+
+  &:hover,
+  &:focus {
+    &::before {
+      height: 100%;
+    }
+
+    .btn-wrap {
+      .text-one {
+        transform: translateY(-150%);
+      }
+
+      .text-two {
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--black);
+      }
+    }
+  }
+
+  &:after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+
+  &::before {
+    background-color: var(--white);
+    content: "";
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    position: absolute;
+    transition: all 0.5s;
+  }
+
+  .btn-wrap {
+    z-index: 1;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    border: none;
+
+    .text-one,
+    .text-two {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .text-one {
+      position: relative;
+      color: var(--white);
+      transition: all 0.5s;
+    }
+
+    .text-two {
+      position: absolute;
+      top: 100%;
+      color: var(--black);
+      transition: all 0.5s;
+    }
+  }
+
+  &__black {
+    background-color: var(--black);
+
+    &::before {
+      background-color: var(--action);
+    }
+
+    &:hover {
+      .btn-wrap {
+        .text-two {
+          color: var(--white);
+        }
+      }
+    }
+  }
+}
+
+.btn-primary {
+  z-index: 1;
+  font-size: 18px;
+  font-weight: 700;
+  overflow: hidden;
+  line-height: 28px;
+  padding: 14px 30px;
+  padding-left: 48px;
+  position: relative;
+  color: var(--black);
+  border-radius: 90px;
+  display: inline-block;
+  background-color: var(--white);
+
+  &::before {
+    content: "";
+    top: 50%;
+    left: 30px;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    transition: all 0.5s;
+    border-radius: 500px;
+    background-color: var(--black);
+    transform: translate(0px, -50%);
+  }
+  &::after {
+    content: "";
+    left: 0;
+    right: 0;
+    height: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    border-radius: 500px;
+    transition: all 0.5s;
+    background-color: var(--action);
+  }
+
+  &:hover {
+    &::after {
+      height: 100%;
+    }
+  }
+
+  &.btn-black-2 {
+    background-color: var(--black);
+    color: var(--white);
+    padding: 19px 32px;
+
+    &::before {
+      background-color: var(--white);
+      left: 18px;
+    }
+    &::after {
+      background-color: var(--blue);
+    }
+  }
+}
+
+.btn-black {
+  gap: 10px;
+  z-index: 1;
+  font-size: 18px;
+  font-weight: 700;
+  overflow: hidden;
+  line-height: 28px;
+  padding: 19px 29px;
+  position: relative;
+  color: var(--white);
+  border-radius: 90px;
+  align-items: center;
+  text-transform: uppercase;
+  display: inline-flex;
+  justify-content: center;
+  transition: all 0.9s;
+  background-color: var(--black);
+
+  @media #{$xs} {
+    font-size: 15px;
+    line-height: 28px;
+    padding: 16px 23px;
+  }
+
+  &::after {
+    content: "";
+    left: 0;
+    right: 0;
+    height: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    border-radius: 500px;
+    transition: all 0.5s;
+    background-color: var(--blue);
+  }
+
+  &:hover {
+    color: var(--white);
+
+    &::after {
+      height: 100%;
+    }
+  }
+
+  &.btn-white {
+    background-color: var(--white);
+    color: var(--black);
+
+    &::after {
+      background-color: var(--action);
+    }
+  }
+
+  &.btn-white-2 {
+    background-color: #3b4eff;
+    color: var(--white);
+    text-transform: capitalize;
+
+    &::after {
+      background-color: var(--action);
+    }
+
+    &:hover {
+      color: var(--black);
+    }
+  }
+}
+
+.rr-btnn {
+  position: relative;
+  padding: 19px 41px;
+  margin-top: 30px;
+  text-transform: lowercase;
+  margin-bottom: 30px;
+  &::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    left: 25px;
+    background: #000000;
+    border-radius: 100px;
+  }
+  &-2 {
+    width: 100%;
+  }
+}
+.btn-re {
+  margin-top: 25px;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  color: #000000;
+  padding: 19px 42px;
+}
